@@ -1,0 +1,11 @@
+src/kernel/CMakeCache.txt
+src/kernel/CMakeFiles
+src/kernel/CMakeScripts
+src/kernel/Testing
+src/kernel/Makefile
+src/kernel/cmake_install.cmake
+src/kernel/install_manifest.txt
+src/kernel/compile_commands.json
+src/kernel/CTestTestfile.cmake
+src/kernel/bin
+src/kernel/build.sh
