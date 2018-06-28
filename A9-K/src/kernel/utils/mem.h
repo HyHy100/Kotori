@@ -1,21 +1,24 @@
-#ifndef _STRINGH_
+#if !defined(_STRINGH_)
 #define _STRINGH_
 
 #include <stdint.h>
 
-void memset(void* dest, long size, unsigned char value)
-{
+void kmemset(void* dest, long size, unsigned char value) {
+    uint8_t* _dest = (uint8_t*)dest;
+
     for (long i = 0; i < size; i++)
     {
-        *((unsigned char*)dest++) = value;
+        *_dest++ = value;
     }
 }
 
-void memcpy(void* src, long size, void* dest)
-{
+void kmemcpy(const void* src, long size, void* dest) {
+    const uint8_t* _src = (const uint8_t*)src;
+    uint8_t* _dest = (uint8_t*)dest;
+
     for (long i = 0; i < size; i++)
     {
-        *((unsigned char*)dest++) = *((unsigned char*)src++);
+        *_dest++ = *_src++;
     }
 }
 

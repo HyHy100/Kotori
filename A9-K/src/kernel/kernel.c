@@ -1,13 +1,14 @@
-#include <stdint.h>
-
-#include "string.h"
-#include "dri/video/pl111/init.h"
+#include "dri/video/pl111/pl111.h"
 #include "dri/serial/uart/pl011.h"
-#include "irq.h"
+#include "arch/arm/gic/1_0_0.h"
+#include "utils/io.h"
+
+#define SWI(N) asm("swi %0" : : "i"(N))
 
 void main() {
-    print("Hello.\n");
     pl111start(0);
-    asm("swi 0x015");
-    while (1) {}
+    pl011start();
+    start_gic();
+    clscr(0xFF00FF);
+    SWI(0x015);
 }

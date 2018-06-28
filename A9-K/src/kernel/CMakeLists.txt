@@ -12,12 +12,15 @@ set(LINKER_FILE "linker.ld")
 
 set(KERNEL_FILES    kernel.c
                     irq.c
+                    utils/io.c
 )
 
 set(ARCH_FILES      arch/arm/start.s
+                    arch/arm/gic/1_0_0.c
 )
 
-set(DRI_FILES       dri/video/pl111/init.c
+set(DRI_FILES       dri/video/pl111/pl111.c
+                    dri/serial/serial.c
                     dri/serial/uart/pl011.c
 )
 
@@ -42,6 +45,6 @@ set(OUT_FILE ${PROJECT_NAME}.elf)
 add_executable(${OUT_FILE} ${COMMON_SOURCES})
 
 set(QEMU_EXECUTABLE qemu-system-arm)
-set(QEMU_ARGS -M vexpress-a9 -smp 1 -s -m 256 -kernel ${OUT_RDIR}/${OUT_FILE} -append "console=ttyAMA0,115200 root=/dev/mmcblk0" -serial stdio -net nic -net user)
+set(QEMU_ARGS -M vexpress-a9 -smp 4 -s -m 256 -kernel ${OUT_RDIR}/${OUT_FILE} -append "console=ttyAMA0,115200 root=/dev/mmcblk0" -serial stdio -net nic -net user)
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD COMMAND ${QEMU_EXECUTABLE} ${QEMU_ARGS} COMMENT "Starting QemuARM...")

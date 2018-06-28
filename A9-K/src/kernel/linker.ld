@@ -5,35 +5,43 @@ MEMORY {
 }
 
 SECTIONS {
-    text : {
+    .text : {
         KEEP(*(.ivt_table))
         *(.text)
         etext = .;
     } > RAM
 
-    data : {
-        *(.rodata)
+    .bss : {
+        sbss = .;
+        *(.bss)
+        ebss = .;
     } > RAM
 
-    bss : {
-        *(.bss)
+    sheap = .;
+    heap = .;
+    . += 0x8000;
+    eheap = .;
+    . += 0x8000;
+
+    .data : {
+        *(.data)
     } > RAM
-    
-    . = . + 0x1000;
+
+    . = . + 0x8000;
     stack_svc = .;
 
-    . = . + 0x1000;
+    . = . + 0x8000;
     stack_und = .;
-    
-    . = . + 0x1000;
+
+    . = . + 0x8000;
     stack_abt = .;
-    
-    . = . + 0x1000;
+
+    . = . + 0x8000;
     stack_irq = .;
-    
-    . = . + 0x1000;
+
+    . = . + 0x8000;
     stack_fiq = .;
-    
-    . = . + 0x1000;
+
+    . = . + 0x8000;
     stack_usr = .;
 }

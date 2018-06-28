@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "pl111.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "serial.h": "c"
     }
 }
