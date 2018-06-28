@@ -22,7 +22,7 @@ typedef uint8_t byte_t;
 
 #define ADDR2B(X) ((unsigned char*)X)
 
-/*
+/* 
     _IO = ReadWrite
     _I = ReadOnly
     _O = WriteOnly(This will be used for memory areas that will return an undefined result if you read them)
