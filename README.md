@@ -1,4 +1,4 @@
-# HyreOS
+# [K]otori
 
 My studies about RISC-V bare metal programming and OS development.
 
