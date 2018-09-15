@@ -1,0 +1,2 @@
+/usr/bin/ar qc libarch_riscv_timers.a  CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj
+/usr/bin/ranlib libarch_riscv_timers.a

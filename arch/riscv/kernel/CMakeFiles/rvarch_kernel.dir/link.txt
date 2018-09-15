@@ -1,0 +1,2 @@
+/usr/bin/ar qc librvarch_kernel.a  CMakeFiles/rvarch_kernel.dir/pcb.cpp.obj CMakeFiles/rvarch_kernel.dir/tcb.cpp.obj
+/usr/bin/ranlib librvarch_kernel.a

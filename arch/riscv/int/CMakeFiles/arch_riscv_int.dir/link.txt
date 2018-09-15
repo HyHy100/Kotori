@@ -1,0 +1,2 @@
+/usr/bin/ar qc libarch_riscv_int.a  CMakeFiles/arch_riscv_int.dir/inte.cpp.obj
+/usr/bin/ranlib libarch_riscv_int.a

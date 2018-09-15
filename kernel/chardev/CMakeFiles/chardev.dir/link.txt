@@ -1,0 +1,2 @@
+/usr/bin/ar qc libchardev.a  CMakeFiles/chardev.dir/uart.cpp.obj
+/usr/bin/ranlib libchardev.a

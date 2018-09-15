@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libRISCV_ARCH.a"
+)

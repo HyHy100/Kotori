@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRISCV_ARCH.a  CMakeFiles/RISCV_ARCH.dir/proc.cpp.obj
+/usr/bin/ranlib libRISCV_ARCH.a

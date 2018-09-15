@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hyreos/Documentos/waifu content/arch/riscv/kernel/pcb.cpp
+pcb.hpp
+/home/hyreos/Documentos/waifu content/arch/riscv/kernel/pcb.hpp
+
+/home/hyreos/Documentos/waifu content/arch/riscv/kernel/pcb.hpp
+tcb.hpp
+/home/hyreos/Documentos/waifu content/arch/riscv/kernel/tcb.hpp
+ktl/list/single.hpp
+-
+
+/home/hyreos/Documentos/waifu content/arch/riscv/kernel/tcb.cpp
+tcb.hpp
+/home/hyreos/Documentos/waifu content/arch/riscv/kernel/tcb.hpp
+pcb.hpp
+/home/hyreos/Documentos/waifu content/arch/riscv/kernel/pcb.hpp
+
+/home/hyreos/Documentos/waifu content/arch/riscv/kernel/tcb.hpp
+cstdint
+-
+
+ktl/list/node.hpp
+
+ktl/list/single.hpp
+node.hpp
+ktl/list/node.hpp
+

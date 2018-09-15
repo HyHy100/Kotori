@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.cpp
+htif.hpp
+/home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
+
+/home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
+cstdint
+-
+type_traits
+-
+

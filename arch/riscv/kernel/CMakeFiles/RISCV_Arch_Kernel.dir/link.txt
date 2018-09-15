@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRISCV_Arch_Kernel.a  CMakeFiles/RISCV_Arch_Kernel.dir/pcb.cpp.obj CMakeFiles/RISCV_Arch_Kernel.dir/tcb.cpp.obj
+/usr/bin/ranlib libRISCV_Arch_Kernel.a

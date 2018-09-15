@@ -1,0 +1,2 @@
+/usr/bin/ar qc libArch.a  CMakeFiles/Arch.dir/riscv/proc.cpp.obj CMakeFiles/Arch.dir/riscv/sifive/serial.cpp.obj
+/usr/bin/ranlib libArch.a

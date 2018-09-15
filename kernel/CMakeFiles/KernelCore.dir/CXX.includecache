@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hyreos/Documentos/waifu content/kernel/chardev/uart.cpp
+uart.hpp
+/home/hyreos/Documentos/waifu content/kernel/chardev/uart.hpp
+
+/home/hyreos/Documentos/waifu content/kernel/chardev/uart.hpp
+../../ktl/utility.hpp
+/home/hyreos/Documentos/waifu content/ktl/utility.hpp
+../../ktl/memory.hpp
+/home/hyreos/Documentos/waifu content/ktl/memory.hpp
+cstddef
+-
+
+/home/hyreos/Documentos/waifu content/ktl/memory.hpp
+type_traits
+-
+new
+-
+
+/home/hyreos/Documentos/waifu content/ktl/utility.hpp
+
