@@ -4,17 +4,11 @@
 #include <type_traits>
 
 namespace kt::riscv::spike {
-    class HtifIO {
+    class Htif {
     public:
         using data_type = std::uint8_t;
 
-        HtifIO() = default;
-        
-        HtifIO(const HtifIO&) = default;
-        
-        HtifIO(HtifIO&&) = default;
-
-        ~HtifIO() = default;
+        Htif() = delete;
 
         enum class Device : std::uint64_t {
             eSyscllHandler = 0x0ul,
@@ -36,8 +30,10 @@ namespace kt::riscv::spike {
             ePrint = 0x1ul
         };
 
-        void cputc(char c);
+        static void sendDataToHost(std::int64_t c);
 
-        void print_string(const char* s);
+        static std::int64_t recvDataFromHost();
+        
+        static void init();
     };
 }

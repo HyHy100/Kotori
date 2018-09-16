@@ -5,6 +5,12 @@ CMakeFiles/kotori.dir/startup.S.obj: startup.S
 
 CMakeFiles/kotori.dir/arch/riscv/dri/console/spike/htif.cpp.obj: arch/riscv/dri/console/spike/htif.cpp
 CMakeFiles/kotori.dir/arch/riscv/dri/console/spike/htif.cpp.obj: arch/riscv/dri/console/spike/htif.hpp
+CMakeFiles/kotori.dir/arch/riscv/dri/console/spike/htif.cpp.obj: kernel/chardev/uart.hpp
+CMakeFiles/kotori.dir/arch/riscv/dri/console/spike/htif.cpp.obj: kernel/sync.hpp
+CMakeFiles/kotori.dir/arch/riscv/dri/console/spike/htif.cpp.obj: kernel/utility.hpp
+CMakeFiles/kotori.dir/arch/riscv/dri/console/spike/htif.cpp.obj: ktl/array.hpp
+CMakeFiles/kotori.dir/arch/riscv/dri/console/spike/htif.cpp.obj: ktl/memory.hpp
+CMakeFiles/kotori.dir/arch/riscv/dri/console/spike/htif.cpp.obj: ktl/utility.hpp
 
 CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: arch/riscv/int/inte.cpp
 CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: arch/riscv/int/inte.hpp
@@ -13,6 +19,7 @@ CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: arch/riscv/security/priv.hpp
 CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: helpers/kdef.hpp
 CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: kernel/chardev/uart.hpp
 CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: kernel/errors.hpp
+CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: kernel/sync.hpp
 CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: kernel/utility.hpp
 CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: ktl/array.hpp
 CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj: ktl/bit.hpp
@@ -32,8 +39,8 @@ CMakeFiles/kotori.dir/arch/riscv/kernel/tcb.cpp.obj: arch/riscv/kernel/tcb.hpp
 CMakeFiles/kotori.dir/arch/riscv/kernel/tcb.cpp.obj: ktl/list/node.hpp
 CMakeFiles/kotori.dir/arch/riscv/kernel/tcb.cpp.obj: ktl/list/single.hpp
 
+CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/dri/console/spike/htif.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/int/inte.hpp
-CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/madoka.h
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/proc.cpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/proc.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/regs.hpp
@@ -41,14 +48,19 @@ CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/security/priv.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/sifive/serial.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/timer/rtc.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/trap.h
+CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/vm/vm.hpp
+CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/riscv/weeb.hpp
+CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: arch/tardef.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: helpers/kdef.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: kernel/chardev/uart.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: kernel/errors.hpp
+CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: kernel/sync.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: kernel/utility.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: ktl/array.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: ktl/bit.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: ktl/memory.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: ktl/utility.hpp
+CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: term/colors.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: helpers/kdef.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj: ktl/memory.hpp
 
@@ -67,6 +79,7 @@ CMakeFiles/kotori.dir/arch/riscv/timer/rtc.cpp.obj: arch/riscv/timer/rtc.hpp
 CMakeFiles/kotori.dir/arch/riscv/timer/rtc.cpp.obj: helpers/kdef.hpp
 CMakeFiles/kotori.dir/arch/riscv/timer/rtc.cpp.obj: kernel/chardev/uart.hpp
 CMakeFiles/kotori.dir/arch/riscv/timer/rtc.cpp.obj: kernel/errors.hpp
+CMakeFiles/kotori.dir/arch/riscv/timer/rtc.cpp.obj: kernel/sync.hpp
 CMakeFiles/kotori.dir/arch/riscv/timer/rtc.cpp.obj: kernel/utility.hpp
 CMakeFiles/kotori.dir/arch/riscv/timer/rtc.cpp.obj: ktl/array.hpp
 CMakeFiles/kotori.dir/arch/riscv/timer/rtc.cpp.obj: ktl/bit.hpp
@@ -79,9 +92,8 @@ CMakeFiles/kotori.dir/kernel/chardev/uart.cpp.obj: kernel/chardev/uart.hpp
 CMakeFiles/kotori.dir/kernel/chardev/uart.cpp.obj: ktl/memory.hpp
 CMakeFiles/kotori.dir/kernel/chardev/uart.cpp.obj: ktl/utility.hpp
 
-CMakeFiles/kotori.dir/kernel/utility.cpp.obj: arch/riscv/dri/console/spike/htif.hpp
-CMakeFiles/kotori.dir/kernel/utility.cpp.obj: arch/riscv/sifive/serial.hpp
 CMakeFiles/kotori.dir/kernel/utility.cpp.obj: kernel/chardev/uart.hpp
+CMakeFiles/kotori.dir/kernel/utility.cpp.obj: kernel/sync.hpp
 CMakeFiles/kotori.dir/kernel/utility.cpp.obj: kernel/utility.cpp
 CMakeFiles/kotori.dir/kernel/utility.cpp.obj: kernel/utility.hpp
 CMakeFiles/kotori.dir/kernel/utility.cpp.obj: ktl/array.hpp
@@ -94,6 +106,7 @@ CMakeFiles/kotori.dir/main.cpp.obj: arch/riscv/regs.hpp
 CMakeFiles/kotori.dir/main.cpp.obj: arch/riscv/sifive/serial.hpp
 CMakeFiles/kotori.dir/main.cpp.obj: helpers/kdef.hpp
 CMakeFiles/kotori.dir/main.cpp.obj: kernel/chardev/uart.hpp
+CMakeFiles/kotori.dir/main.cpp.obj: kernel/sync.hpp
 CMakeFiles/kotori.dir/main.cpp.obj: kernel/utility.hpp
 CMakeFiles/kotori.dir/main.cpp.obj: ktl/array.hpp
 CMakeFiles/kotori.dir/main.cpp.obj: ktl/bit.hpp

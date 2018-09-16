@@ -8,6 +8,7 @@ arch/riscv/int/CMakeFiles/arch_riscv_int.dir/inte.cpp.obj: arch/riscv/security/p
 arch/riscv/int/CMakeFiles/arch_riscv_int.dir/inte.cpp.obj: helpers/kdef.hpp
 arch/riscv/int/CMakeFiles/arch_riscv_int.dir/inte.cpp.obj: kernel/chardev/uart.hpp
 arch/riscv/int/CMakeFiles/arch_riscv_int.dir/inte.cpp.obj: kernel/errors.hpp
+arch/riscv/int/CMakeFiles/arch_riscv_int.dir/inte.cpp.obj: kernel/sync.hpp
 arch/riscv/int/CMakeFiles/arch_riscv_int.dir/inte.cpp.obj: kernel/utility.hpp
 arch/riscv/int/CMakeFiles/arch_riscv_int.dir/inte.cpp.obj: ktl/array.hpp
 arch/riscv/int/CMakeFiles/arch_riscv_int.dir/inte.cpp.obj: ktl/bit.hpp

@@ -64,6 +64,8 @@ cstddef
 cstdint
 -
 
+/home/hyreos/Documentos/waifu-content/kernel/sync.hpp
+
 /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
 chardev/uart.hpp
 /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
@@ -71,6 +73,8 @@ chardev/uart.hpp
 /home/hyreos/Documentos/waifu-content/ktl/array.hpp
 ../ktl/memory.hpp
 /home/hyreos/Documentos/waifu-content/ktl/memory.hpp
+sync.hpp
+/home/hyreos/Documentos/waifu-content/kernel/sync.hpp
 
 /home/hyreos/Documentos/waifu-content/ktl/array.hpp
 cstddef

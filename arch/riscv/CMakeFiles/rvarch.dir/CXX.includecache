@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
+cstdint
+-
+type_traits
+-
+
 /home/hyreos/Documentos/waifu-content/arch/riscv/int/inte.hpp
 ../regs.hpp
 /home/hyreos/Documentos/waifu-content/arch/riscv/regs.hpp
@@ -22,8 +28,6 @@ helpers/kdef.hpp
 cstdint
 -
 
-/home/hyreos/Documentos/waifu-content/arch/riscv/madoka.h
-
 /home/hyreos/Documentos/waifu-content/arch/riscv/proc.cpp
 proc.hpp
 /home/hyreos/Documentos/waifu-content/arch/riscv/proc.hpp
@@ -39,10 +43,16 @@ ktl/memory.hpp
 -
 ../../kernel/utility.hpp
 /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
+vm/vm.hpp
+/home/hyreos/Documentos/waifu-content/arch/riscv/vm/vm.hpp
 int/inte.hpp
 /home/hyreos/Documentos/waifu-content/arch/riscv/int/inte.hpp
-madoka.h
-/home/hyreos/Documentos/waifu-content/arch/riscv/madoka.h
+../../term/colors.hpp
+/home/hyreos/Documentos/waifu-content/term/colors.hpp
+dri/console/spike/htif.hpp
+/home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
+weeb.hpp
+/home/hyreos/Documentos/waifu-content/arch/riscv/weeb.hpp
 
 /home/hyreos/Documentos/waifu-content/arch/riscv/proc.hpp
 regs.hpp
@@ -90,6 +100,24 @@ cstddef
 
 /home/hyreos/Documentos/waifu-content/arch/riscv/trap.h
 
+/home/hyreos/Documentos/waifu-content/arch/riscv/vm/vm.hpp
+cstdint
+-
+../regs.hpp
+/home/hyreos/Documentos/waifu-content/arch/riscv/regs.hpp
+../../../helpers/kdef.hpp
+/home/hyreos/Documentos/waifu-content/helpers/kdef.hpp
+../../../ktl/array.hpp
+/home/hyreos/Documentos/waifu-content/ktl/array.hpp
+../../../kernel/utility.hpp
+/home/hyreos/Documentos/waifu-content/kernel/utility.hpp
+../../tardef.hpp
+/home/hyreos/Documentos/waifu-content/arch/tardef.hpp
+
+/home/hyreos/Documentos/waifu-content/arch/riscv/weeb.hpp
+
+/home/hyreos/Documentos/waifu-content/arch/tardef.hpp
+
 /home/hyreos/Documentos/waifu-content/helpers/kdef.hpp
 
 /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
@@ -104,6 +132,8 @@ cstddef
 cstdint
 -
 
+/home/hyreos/Documentos/waifu-content/kernel/sync.hpp
+
 /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
 chardev/uart.hpp
 /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
@@ -111,6 +141,8 @@ chardev/uart.hpp
 /home/hyreos/Documentos/waifu-content/ktl/array.hpp
 ../ktl/memory.hpp
 /home/hyreos/Documentos/waifu-content/ktl/memory.hpp
+sync.hpp
+/home/hyreos/Documentos/waifu-content/kernel/sync.hpp
 
 /home/hyreos/Documentos/waifu-content/ktl/array.hpp
 cstddef
@@ -127,6 +159,8 @@ new
 -
 
 /home/hyreos/Documentos/waifu-content/ktl/utility.hpp
+
+/home/hyreos/Documentos/waifu-content/term/colors.hpp
 
 helpers/kdef.hpp
 

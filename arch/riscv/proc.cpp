@@ -6,7 +6,11 @@
 
 #include <ktl/memory.hpp>
 #include "../../kernel/utility.hpp"
+#include "vm/vm.hpp"
 #include "int/inte.hpp"
+
+#include "../../term/colors.hpp"
+#include "dri/console/spike/htif.hpp"
 
                                                                                                 
 namespace kt::riscv::proc {
@@ -87,66 +91,59 @@ namespace kt::riscv::proc {
 
     void archKernelStart()
     {
+        spike::Htif::init();
+
         setTrapVector(inte::trapVectorHandler);
         inte::enaint();
         
         //delegateExceptions();
         
-        /*constexpr auto printSeparator = [] {
-            kt::utility::printk("|\n|\n");
+        constexpr auto printSeparator = [] {
+            aux::console << ANSI_COLOR_YELLOW"|\n|\n";
         };
 
-        kt::utility::printk(
-            #include "madoka.h"
+        aux::console << (
+            #include "weeb.hpp"
         );
-        
-        kt::utility::printk("[K]otori: a weeaboo embedded kernel. o//o\n");
-        kt::utility::printk("Collecting CPU information... \n");
 
-        kt::utility::printk("# Arch: RISC-V\n");*/
-        //printSeparator();
+        aux::console << ANSI_COLOR_BLUE "[K]" ANSI_COLOR_MAGENTA "otori: a weeaboo embedded kernel. o//o\n" ANSI_COLOR_RESET;
+        aux::console << ANSI_COLOR_YELLOW"Collecting CPU information... \n";
+
+        aux::console << ANSI_COLOR_BLUE"-- Arch:" ANSI_COLOR_RED " RISC-V\n" ANSI_COLOR_RESET;
+        printSeparator();
         
         machineInfo = queryCPUInformation();
         
-        //kt::utility::printk("Info:\n");
+        aux::console << ANSI_COLOR_YELLOW"Info:\n";
 
-        //printSeparator();
-        //kt::utility::printk("- width: ");
+        printSeparator();
+        aux::console << ANSI_COLOR_BLUE"-- ISA width: ";
 
         if (machineInfo.isawidth == 32) {
-            kt::utility::printk("32\n");
+            aux::console << ANSI_COLOR_RED"32";
         } else if (machineInfo.isawidth == 64) {
-            kt::utility::printk("64\n");
+            aux::console << ANSI_COLOR_RED"64";
         } else {
-            kt::utility::printk("128\n");
+            aux::console << ANSI_COLOR_RED"128";
         }
 
-        //kt::utility::printk("Ok!\n");
+        aux::console << ANSI_COLOR_YELLOW" - Ok!\n"ANSI_COLOR_RESET;
 
-        //printSeparator();
+        printSeparator();
 
-        //kt::utility::printk("Setting up trap handler... ");
+        aux::console << "Setting up trap handler...\n";
 
-        //kt::utility::printk("Ok!\n");
+        aux::console << "Ok!\n";
 
-        //sifive::init();
+        sifive::init();
 
-        //kt::utility::printk("Initializing rtc timers... ");
+        aux::console << "Initializing rtc timers... \n";
 
         timers::rtcTimerInit();
 
-        //kt::utility::printk("Ok!\n");
+        aux::console << "Ok!\n";
 
-        //asm volatile("addi t0, x0, 55");
-
-        /* asm volatile("csrw medeleg, t0");
-         asm volatile("csrr t1, medeleg");
-         asm volatile("li t0, 62");
-         asm volatile("csrw mtvec, t0");
-         asm volatile("csrr t0, mtvec");
-        */
-        
-        //asm volatile("ecall");
+        vm::initMemory();
 
         while (1) { asm volatile("wfi"); }
     }

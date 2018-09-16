@@ -10,6 +10,7 @@ arch/riscv/timer/CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj
  /home/hyreos/Documentos/waifu-content/helpers/kdef.hpp
  /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
  /home/hyreos/Documentos/waifu-content/kernel/errors.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/sync.hpp
  /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
  /home/hyreos/Documentos/waifu-content/ktl/array.hpp
  /home/hyreos/Documentos/waifu-content/ktl/bit.hpp

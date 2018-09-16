@@ -3,4 +3,10 @@
 
 arch/riscv/dri/console/spike/CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj: arch/riscv/dri/console/spike/htif.cpp
 arch/riscv/dri/console/spike/CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj: arch/riscv/dri/console/spike/htif.hpp
+arch/riscv/dri/console/spike/CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj: kernel/chardev/uart.hpp
+arch/riscv/dri/console/spike/CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj: kernel/sync.hpp
+arch/riscv/dri/console/spike/CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj: kernel/utility.hpp
+arch/riscv/dri/console/spike/CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj: ktl/array.hpp
+arch/riscv/dri/console/spike/CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj: ktl/memory.hpp
+arch/riscv/dri/console/spike/CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj: ktl/utility.hpp
 

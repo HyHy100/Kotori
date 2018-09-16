@@ -4,3 +4,9 @@
 arch/riscv/dri/console/spike/CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj
  /home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.cpp
  /home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/sync.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
+ /home/hyreos/Documentos/waifu-content/ktl/array.hpp
+ /home/hyreos/Documentos/waifu-content/ktl/memory.hpp
+ /home/hyreos/Documentos/waifu-content/ktl/utility.hpp

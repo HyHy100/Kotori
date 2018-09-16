@@ -6,6 +6,12 @@ CMakeFiles/kotori.dir/startup.S.obj
 CMakeFiles/kotori.dir/arch/riscv/dri/console/spike/htif.cpp.obj
  /home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.cpp
  /home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/sync.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
+ /home/hyreos/Documentos/waifu-content/ktl/array.hpp
+ /home/hyreos/Documentos/waifu-content/ktl/memory.hpp
+ /home/hyreos/Documentos/waifu-content/ktl/utility.hpp
 CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj
  /home/hyreos/Documentos/waifu-content/arch/riscv/int/inte.cpp
  /home/hyreos/Documentos/waifu-content/arch/riscv/int/inte.hpp
@@ -14,6 +20,7 @@ CMakeFiles/kotori.dir/arch/riscv/int/inte.cpp.obj
  /home/hyreos/Documentos/waifu-content/helpers/kdef.hpp
  /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
  /home/hyreos/Documentos/waifu-content/kernel/errors.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/sync.hpp
  /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
  /home/hyreos/Documentos/waifu-content/ktl/array.hpp
  /home/hyreos/Documentos/waifu-content/ktl/bit.hpp
@@ -33,8 +40,8 @@ CMakeFiles/kotori.dir/arch/riscv/kernel/tcb.cpp.obj
  ktl/list/node.hpp
  ktl/list/single.hpp
 CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj
+ /home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
  /home/hyreos/Documentos/waifu-content/arch/riscv/int/inte.hpp
- /home/hyreos/Documentos/waifu-content/arch/riscv/madoka.h
  /home/hyreos/Documentos/waifu-content/arch/riscv/proc.cpp
  /home/hyreos/Documentos/waifu-content/arch/riscv/proc.hpp
  /home/hyreos/Documentos/waifu-content/arch/riscv/regs.hpp
@@ -42,14 +49,19 @@ CMakeFiles/kotori.dir/arch/riscv/proc.cpp.obj
  /home/hyreos/Documentos/waifu-content/arch/riscv/sifive/serial.hpp
  /home/hyreos/Documentos/waifu-content/arch/riscv/timer/rtc.hpp
  /home/hyreos/Documentos/waifu-content/arch/riscv/trap.h
+ /home/hyreos/Documentos/waifu-content/arch/riscv/vm/vm.hpp
+ /home/hyreos/Documentos/waifu-content/arch/riscv/weeb.hpp
+ /home/hyreos/Documentos/waifu-content/arch/tardef.hpp
  /home/hyreos/Documentos/waifu-content/helpers/kdef.hpp
  /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
  /home/hyreos/Documentos/waifu-content/kernel/errors.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/sync.hpp
  /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
  /home/hyreos/Documentos/waifu-content/ktl/array.hpp
  /home/hyreos/Documentos/waifu-content/ktl/bit.hpp
  /home/hyreos/Documentos/waifu-content/ktl/memory.hpp
  /home/hyreos/Documentos/waifu-content/ktl/utility.hpp
+ /home/hyreos/Documentos/waifu-content/term/colors.hpp
  helpers/kdef.hpp
  ktl/memory.hpp
 CMakeFiles/kotori.dir/arch/riscv/sifive/serial.cpp.obj
@@ -68,6 +80,7 @@ CMakeFiles/kotori.dir/arch/riscv/timer/rtc.cpp.obj
  /home/hyreos/Documentos/waifu-content/helpers/kdef.hpp
  /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
  /home/hyreos/Documentos/waifu-content/kernel/errors.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/sync.hpp
  /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
  /home/hyreos/Documentos/waifu-content/ktl/array.hpp
  /home/hyreos/Documentos/waifu-content/ktl/bit.hpp
@@ -80,9 +93,8 @@ CMakeFiles/kotori.dir/kernel/chardev/uart.cpp.obj
  /home/hyreos/Documentos/waifu-content/ktl/memory.hpp
  /home/hyreos/Documentos/waifu-content/ktl/utility.hpp
 CMakeFiles/kotori.dir/kernel/utility.cpp.obj
- /home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
- /home/hyreos/Documentos/waifu-content/arch/riscv/sifive/serial.hpp
  /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/sync.hpp
  /home/hyreos/Documentos/waifu-content/kernel/utility.cpp
  /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
  /home/hyreos/Documentos/waifu-content/ktl/array.hpp
@@ -95,6 +107,7 @@ CMakeFiles/kotori.dir/main.cpp.obj
  /home/hyreos/Documentos/waifu-content/arch/riscv/sifive/serial.hpp
  /home/hyreos/Documentos/waifu-content/helpers/kdef.hpp
  /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
+ /home/hyreos/Documentos/waifu-content/kernel/sync.hpp
  /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
  /home/hyreos/Documentos/waifu-content/ktl/array.hpp
  /home/hyreos/Documentos/waifu-content/ktl/bit.hpp

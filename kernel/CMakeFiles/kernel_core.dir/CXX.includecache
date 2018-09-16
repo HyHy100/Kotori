@@ -6,26 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
-cstdint
--
-type_traits
--
-
-/home/hyreos/Documentos/waifu-content/arch/riscv/sifive/serial.hpp
-../../../kernel/chardev/uart.hpp
-/home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
-../../../ktl/memory.hpp
-/home/hyreos/Documentos/waifu-content/ktl/memory.hpp
-../../../ktl/array.hpp
-/home/hyreos/Documentos/waifu-content/ktl/array.hpp
-../../../ktl/utility.hpp
-/home/hyreos/Documentos/waifu-content/ktl/utility.hpp
-cstdint
--
-cstddef
--
-
 /home/hyreos/Documentos/waifu-content/kernel/chardev/uart.hpp
 ../../ktl/utility.hpp
 /home/hyreos/Documentos/waifu-content/ktl/utility.hpp
@@ -34,13 +14,11 @@ cstddef
 cstddef
 -
 
+/home/hyreos/Documentos/waifu-content/kernel/sync.hpp
+
 /home/hyreos/Documentos/waifu-content/kernel/utility.cpp
 utility.hpp
 /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
-../arch/riscv/sifive/serial.hpp
-/home/hyreos/Documentos/waifu-content/arch/riscv/sifive/serial.hpp
-../arch/riscv/dri/console/spike/htif.hpp
-/home/hyreos/Documentos/waifu-content/arch/riscv/dri/console/spike/htif.hpp
 
 /home/hyreos/Documentos/waifu-content/kernel/utility.hpp
 chardev/uart.hpp
@@ -49,6 +27,8 @@ chardev/uart.hpp
 /home/hyreos/Documentos/waifu-content/ktl/array.hpp
 ../ktl/memory.hpp
 /home/hyreos/Documentos/waifu-content/ktl/memory.hpp
+sync.hpp
+/home/hyreos/Documentos/waifu-content/kernel/sync.hpp
 
 /home/hyreos/Documentos/waifu-content/ktl/array.hpp
 cstddef

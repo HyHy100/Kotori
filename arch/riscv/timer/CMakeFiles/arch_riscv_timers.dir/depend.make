@@ -9,6 +9,7 @@ arch/riscv/timer/CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj: arch/riscv/timer/
 arch/riscv/timer/CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj: helpers/kdef.hpp
 arch/riscv/timer/CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj: kernel/chardev/uart.hpp
 arch/riscv/timer/CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj: kernel/errors.hpp
+arch/riscv/timer/CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj: kernel/sync.hpp
 arch/riscv/timer/CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj: kernel/utility.hpp
 arch/riscv/timer/CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj: ktl/array.hpp
 arch/riscv/timer/CMakeFiles/arch_riscv_timers.dir/rtc.cpp.obj: ktl/bit.hpp

@@ -1,13 +1,14 @@
 #include "htif.hpp"
+#include "../../../../../kernel/utility.hpp"
 
 namespace kt::riscv::spike {
     extern "C" {
-        volatile uint64_t tohost [[section(".htif")]];
+        [[gnu::section(".htif")]] volatile uint64_t tohost;
 
-        volatile uint64_t fromhost [[section(".htif")]];
+        [[gnu::section(".htif")]] volatile uint64_t fromhost;
     }
     
-    void HtifIO::cputc(char c)
+    void Htif::sendDataToHost(std::int64_t c)
     {
         /*
             HTIF[to host] value encoding:
@@ -16,21 +17,39 @@ namespace kt::riscv::spike {
             [ 56 : 64 ] -> device
         */
 
-        using encoding_type = std::uint64_t;
+       while (tohost) { auto a = fromhost; }
+
+       using encoding_type = std::uint64_t;
 
         encoding_type payload { static_cast<encoding_type>(c) };
 
         encoding_type encodedData { 
             static_cast<encoding_type>(Device::eConsole) << 56 |
             static_cast<encoding_type>(ConsoleCmd::ePrint) << 48 |
-            payload
+            payload & 0xff
         };
 
         tohost = encodedData;
     }
 
-    void HtifIO::print_string(const char* s)
+    std::int64_t Htif::recvDataFromHost()
     {
-        while (*s) cputc(*s++);
+        return fromhost;
+    }
+
+    static void putchar(char c)
+    {
+        Htif::sendDataToHost(static_cast<std::int64_t>(c));
+    }
+
+    static char getchar()
+    {
+        return static_cast<char>(Htif::recvDataFromHost());
+    }
+
+    void Htif::init() 
+    {
+        aux::Console::itf.getchar = getchar;
+        aux::Console::itf.putchar = putchar;
     }
 }

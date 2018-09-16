@@ -43,6 +43,7 @@ namespace kt::riscv::inte {
     }
 
     static ktl::array<functionType, 64> sync;
+
     static ktl::array<functionType, 64> async;
 
     kt::Errors exSyncDispatch(SyncExCodes codeidx)
@@ -54,9 +55,7 @@ namespace kt::riscv::inte {
         }
 
         if (sync[codeidx] == nullptr) {
-            utility::printk("exSyncDispatch: the exception handler \
-                             that's being called is valid but not  \
-                             implemented yet.");
+            aux::console << "exSyncDispatch: the exception handler that's being called is valid but not implemented yet.\n";
             return Errors::eInvalidOperation;
         }
 
@@ -74,9 +73,7 @@ namespace kt::riscv::inte {
         }
 
         if (sync[codeidx] == nullptr) {
-            utility::printk("exAsyncDispatch: the exception handler \
-                             that's being called is valid but not   \
-                             implemented yet.");
+            aux::console << "exAsyncDispatch: the exception handler that's being called is valid but not implemented yet.\n";
             return Errors::eInvalidOperation;
         }
 
@@ -89,7 +86,7 @@ namespace kt::riscv::inte {
     {
         auto cause = queryExCause();
 
-        utility::printk("trap vector handler called\n");
+        aux::console << "trap vector handler called\n";
 
         if (cause.sync) {
             [[maybe_unused]]
