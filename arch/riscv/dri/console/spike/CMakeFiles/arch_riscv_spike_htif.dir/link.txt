@@ -1,2 +1,0 @@
-/usr/bin/ar qc libarch_riscv_spike_htif.a  CMakeFiles/arch_riscv_spike_htif.dir/htif.cpp.obj
-/usr/bin/ranlib libarch_riscv_spike_htif.a

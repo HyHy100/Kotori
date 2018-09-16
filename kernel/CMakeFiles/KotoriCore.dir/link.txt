@@ -1,2 +1,0 @@
-/usr/bin/ar qc libKotoriCore.a  CMakeFiles/KotoriCore.dir/chardev/uart.cpp.obj
-/usr/bin/ranlib libKotoriCore.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libKernelCore.a  CMakeFiles/KernelCore.dir/chardev/uart.cpp.obj
-/usr/bin/ranlib libKernelCore.a

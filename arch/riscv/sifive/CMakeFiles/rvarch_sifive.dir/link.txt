@@ -1,2 +1,0 @@
-/usr/bin/ar qc librvarch_sifive.a  CMakeFiles/rvarch_sifive.dir/serial.cpp.obj
-/usr/bin/ranlib librvarch_sifive.a

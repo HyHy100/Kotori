@@ -1,2 +1,0 @@
-/usr/bin/ar qc libArchRISCVSifive.a  CMakeFiles/ArchRISCVSifive.dir/serial.cpp.obj
-/usr/bin/ranlib libArchRISCVSifive.a

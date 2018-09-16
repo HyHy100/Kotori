@@ -1,2 +1,0 @@
-/usr/bin/ar qc libkernel_core.a  CMakeFiles/kernel_core.dir/utility.cpp.obj
-/usr/bin/ranlib libkernel_core.a

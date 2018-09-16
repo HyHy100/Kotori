@@ -1,2 +1,0 @@
-/usr/bin/ar qc librvarch.a  CMakeFiles/rvarch.dir/proc.cpp.obj
-/usr/bin/ranlib librvarch.a
