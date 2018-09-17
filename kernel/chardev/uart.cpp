@@ -1,6 +1,5 @@
 #include "uart.hpp"
 
-
 namespace kt::serial {
     UART::UART(id_type id)
             : m_id(m_id)
@@ -16,9 +15,7 @@ namespace kt::serial {
 
     std::size_t operator&(const UART::CommAccessMask left, const UART::CommAccessMask right)
     {
-        return static_cast<std::size_t>(
-                    static_cast<std::size_t>(left) & static_cast<std::size_t>(right)
-                );
+        return static_cast<std::size_t>(static_cast<std::size_t>(left) & static_cast<std::size_t>(right));
     }
 
     UART::UART()

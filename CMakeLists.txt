@@ -6,7 +6,7 @@ set(CMAKE_C_COMPILER ${TOOLCHAIN_PREFIX}-gcc)
 set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++)
 set(CMAKE_ASM_COMPILER ${TOOLCHAIN_PREFIX}-as)
 
-add_executable(kotori main.cpp startup.S)
+add_executable(kotori main.cpp)
 
 set(CMAKE_CXX_FLAGS "-march=rv64imac -mabi=lp64 -static -std=c++17 -Os -ffunction-sections -nostartfiles -fpermissive -mcmodel=medany -fno-exceptions -Tlinker.ld")
 set(CMAKE_ASM_FLAGS "-march=rv64imac -mabi=lp64")

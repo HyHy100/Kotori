@@ -13,21 +13,18 @@
 #include "dri/console/spike/htif.hpp"
 
                                                                                                 
-namespace kt::riscv::proc {
+namespace kt::riscv {
     CPUinfo machineInfo;
 
     static void delegateExceptions()
     {
         // Exceptions
-        
         constexpr auto sync = true;
         
-        // Interrupts
-        
+        // Interrupts        
         constexpr auto async = false;
 
         // Delegate interrupts to supervisor mode
-
         inte::exDelegate<async>(sec::OpModes::eMachine, inte::AsyncExCodes::eAccessFault, true);
         inte::exDelegate<async>(sec::OpModes::eMachine, inte::AsyncExCodes::eBreakpoint, true);
         inte::exDelegate<async>(sec::OpModes::eMachine, inte::AsyncExCodes::eEnvCallH, true);
@@ -42,7 +39,6 @@ namespace kt::riscv::proc {
         inte::exDelegate<async>(sec::OpModes::eMachine, inte::AsyncExCodes::eStoreMisaligned, true);
 
         // Delegate exceptions to supervisor mode
-
         inte::exDelegate<sync>(sec::OpModes::eMachine, inte::SyncExCodes::eHExt, true);
         inte::exDelegate<sync>(sec::OpModes::eMachine, inte::SyncExCodes::eHSoftware, true);
         inte::exDelegate<sync>(sec::OpModes::eMachine, inte::SyncExCodes::eHTimer, true);
@@ -78,26 +74,24 @@ namespace kt::riscv::proc {
             cpuinfo.isawidth = 128;
         }
 
-        //KTR_LOAD_CSR(marchid, cpuinfo.archid, regs::CSR_Op::eAtomic);
-        //KTR_LOAD_CSR(mvendorid, cpuinfo.vendorid, regs::CSR_Op::eAtomic);
+        KTR_LOAD_CSR(marchid, cpuinfo.archid, regs::CSR_Op::eAtomic);
+        KTR_LOAD_CSR(mvendorid, cpuinfo.vendorid, regs::CSR_Op::eAtomic);
 
         return cpuinfo;
     }
 
-    static void setTrapVector(void* trapAddress)
+    static void setTrapVector(void(*trapAddress)())
     {
         KTR_STORE_CSR(mtvec, reinterpret_cast<std::size_t>(trapAddress), regs::CSR_Op::eZero);
     }
 
-    void archKernelStart()
+    [[noreturn]]
+    void init()
     {
         spike::Htif::init();
-
         setTrapVector(inte::trapVectorHandler);
         inte::enaint();
-        
-        //delegateExceptions();
-        
+
         constexpr auto printSeparator = [] {
             aux::console << ANSI_COLOR_YELLOW"|\n|\n";
         };
@@ -144,14 +138,28 @@ namespace kt::riscv::proc {
         aux::console << "Ok!\n";
 
         vm::initMemory();
-
-        while (1) { asm volatile("wfi"); }
     }
-
+    
     std::size_t getHartID()
     {
         std::size_t id;
         KTR_LOAD_CSR(mhartid, id, kt::riscv::regs::CSR_Op::eAtomic);
         return id;
+    }
+}
+
+extern "C"
+{
+    extern unsigned kernelStack;
+	extern unsigned kernelHeap;
+
+    [[using gnu : section(".start"), naked]]
+    [[noreturn]]
+    void startEnvironment()
+    {
+        asm volatile(R"(
+            la sp, kernelStack
+        )");
+        kt::riscv::init();
     }
 }

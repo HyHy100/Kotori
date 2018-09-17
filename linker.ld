@@ -1,11 +1,12 @@
 OUTPUT_ARCH( "riscv" )
-ENTRY( _start )
+ENTRY( startEnvironment )
 SECTIONS
 {
-  /* text: test code section */
-  /* . = 0x80000000; */
   . = 0x80000000;
-  .text : { *(.text) }
+  .text : { 
+    *(.start)
+    *(.text)
+  }
   /* data: Initialized data segment */
   .data : { *(.data) }
   .rodata : { *(.rodata) }
@@ -16,8 +17,12 @@ SECTIONS
   }
 
   .debug : { *(.debug) }
-  . += 0x8000;
-  stack_top = .;
+
+  . = ALIGN(4);
+  kernelHeap = .;
+  . += 0x20000000;
+  . = ALIGN(4);
+  kernelStack = .;
 
   /* End of uninitalized data segement */
   _end = .;

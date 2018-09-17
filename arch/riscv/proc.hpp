@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <cstddef>
 
-namespace kt::riscv::proc {
+namespace kt::riscv {
     typedef struct _CPUinfo {
         std::uint64_t vendorid;
         std::uint64_t archid;
@@ -14,5 +14,5 @@ namespace kt::riscv::proc {
 
     std::size_t getHartID();
 
-    extern "C" void archKernelStart();
+    extern "C" void archInit();
 }
